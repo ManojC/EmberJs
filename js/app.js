@@ -5,6 +5,10 @@ App.Router.map(function() {
     this.resource('register');
     this.resource('forgot-password');
     this.resource('about');
+    this.resource('user', function(){
+    	this.resource('search');
+    	this.resource('edit');
+    });
 });
 
 // App.LoginRoute = Ember.Route.extend({
