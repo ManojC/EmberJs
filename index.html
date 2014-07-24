@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+
+    <script type="text/x-handlebars">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+			                <a class="navbar-brand" href="#">Lift Karade !</a>
+
+			                <ul class="nav nav-pills">
+			                    <li> {{#link-to 'login'}}login{{/link-to}}</li>
+			                    <li>{{#link-to 'register'}}register{{/link-to}}</li>
+			                    <li>{{#link-to 'about'}}About{{/link-to}}</li>
+			                </ul>
+			    </div>
+			</div>
+		</div>
+		{{outlet}}    
+    </script>
+    <script type="text/x-handlebars" id="login">
+	    <div class="container text-left" id="loginContainer">
+	        <div class="row mtl">
+	            <div class="col-lg-2 "></div>
+	            <div class="col-lg-2">
+	                <label for="txtuserName"><h5>Username</h5></label>
+	            </div>
+	            <div class="col-lg-4">
+	                <input type="text" class="form-control" id="txtuserName" placeholder="enter your username here">
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2">
+	                <label for="txtuserName"><h5>Password</h5></label>
+	            </div>
+	            <div class="col-lg-4">
+	                <input type="password" class="form-control" id="txtuserName" placeholder="enter password">
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-4 text-right">
+	                <a rel="stylesheet" href="#forgot-password">forgot password</a>
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-4">
+	                <a id="btnLogin" rel="stylesheet" href="#" class="btn btn-primary btn-lg col-lg-12">Sign In!</a>
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-4 text-right">
+	                <span>Not a member yet? register <a rel="stylesheet" href="#register">here</a></span>
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	    </div>
+    </script>
+    <script type="text/x-handlebars" id="register">
+	    <div class="container text-left" id="registerContainer">
+	        <div class="row mtl">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2">
+	                <label for="txtuserName"><h5>Username</h5></label>
+	            </div>
+	            <div class="col-lg-4">
+	                <input type="text" class="form-control" id="txtuserName" placeholder="e.g. john snow">
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2">
+	                <label for="txtEmailId"><h5>Email</h5></label>
+	            </div>
+	            <div class="col-lg-4">
+	                <input type="email" class="form-control" id="txtEmailId" placeholder="e.g. john_snow@winterfell.com">
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2">
+	                <label for="txtPassword"><h5>Password</h5></label>
+	            </div>
+	            <div class="col-lg-4">
+	                <input type="password" class="form-control" id="txtPassword" placeholder="atleast 6 characters">
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2">
+	                <label for="txtRepeatPassword"><h5>Retype Password</h5></label>
+	            </div>
+	            <div class="col-lg-4">
+	                <input type="password" class="form-control" id="txtRepeatPassword" placeholder="Retype Password">
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-4"></div>
+	            <div class="col-lg-4">
+	                <a id="btnRegister" rel="stylesheet" href="#" class="btn btn-primary btn-lg col-lg-12">register!</a>
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row">
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-2"></div>
+	            <div class="col-lg-4 text-right">
+	                <span>Already a member? Sign in <a rel="stylesheet" href="#login">here</a></span>
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	    </div>
+    </script>
+	<script type="text/x-handlebars" id="forgot-password">
+	    <div class="container text-left">
+	        <div class="row mtl">
+	            <div class="col-lg-4"></div>
+	            <div class="col-lg-4">
+	            	<input type="enail" id="txtRecoveryEmail" class="form-control" placeholder="enter registered email id" />
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	        <div class="row mtl">
+	            <div class="col-lg-4"></div>
+	            <div class="col-lg-4">
+	            	<a href="#" class="btn btn-primary btn-lg col-lg-12" id="lnkRecoverEmailid">Reset Password</a>
+	            </div>
+	            <div class="col-lg-4"></div>
+	        </div>
+	    </div>
+	</script>
+	<script type="text/x-handlebars" id="about">			
+	    <div class="container">
+	        <div class="row">
+				<div class="col-lg-3"></div>
+	            <div class="col-lg-6">
+	                <span>
+	                	Lift karade is an effort to make on the spot bookings possible. <br>
+						Customers and car owners can come here and post an advertise as per their need. <br>
+						They can search for their requirement and may get a ride if vehicle is available, <br>
+						One can post the advertise with additional details specifing the cost ane head counts allowed during travel <br>					
+	                </span>
+	            </div>
+				<div class="col-lg-3"></div>
+	        </div>			        
+		    <div class="row mtl">
+				<div class="col-lg-3"></div>
+		        <div class="col-lg-6">
+		            <span>Get started by <a href="#login" id="lnkLoginAbout">Logging in</a> or <a href="#register">register</a> if you are not a member yet...</span>
+		        </div>
+				<div class="col-lg-3"></div>
+		    </div>
+
+	    </div>
+	</script>
+</body>
+
+<script src="js/libs/jquery-1.10.2.js"></script>
+<script src="js/libs/handlebars-1.1.2.js"></script>
+<script src="js/libs/ember-1.6.1.js"></script>
+<script src="js/app.js"></script>
+
+</html>
